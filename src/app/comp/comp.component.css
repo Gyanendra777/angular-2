@@ -1,0 +1,9 @@
+mat-card{
+  width: 80%;
+  background-color: rgb(192, 255, 192);
+  /* box-sizing: border-box; */
+  /* content: counter(-50px -50px); */
+  /* transform: translate(0%, 0%); */
+  position: relative;
+  left: 10%;
+}

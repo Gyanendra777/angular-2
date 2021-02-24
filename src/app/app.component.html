@@ -1,0 +1,30 @@
+<!-- <mat-card>Simple card
+<h2>about us</h2>
+<input type="text " placeholder="Input here..." #val>
+<button (click)="submitvalue(val)">submitte</button>
+<br>
+<br>
+<br>
+  <app-comp [myvalue]="value"></app-comp>
+</mat-card> -->
+
+  <!-- <ol  *ngFor="let employee of run">
+    <li [(ngModel)]="emploee.id">
+        {{emploee.name}}
+    </li>
+  </ol> -->
+
+<!-- <h2 [(ngModel)]="raju"></h2> -->
+<!-- <h1 root></h1> -->
+
+<mat-card>
+
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)" >
+  <input type = "text" name = "emailid" placeholder = "emailid" ngModel>
+  <br/>
+  <input type = "password" name = "passwd" placeholder = "passwd" ngModel>
+  <br/>
+  <input type = "submit" value = "submit">
+</form>
+<app-sr></app-sr>
+</mat-card>
