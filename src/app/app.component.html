@@ -1,17 +1,12 @@
-<!-- <mat-card>Simple card
-<h2>about us</h2>
-<input type="text " placeholder="Input here..." #val>
-<button (click)="submitvalue(val)">submitte</button>
-<br>
-<br>
-<br>
-  <app-comp [myvalue]="value"></app-comp>
-</mat-card> -->
 
-  <!-- <ol  *ngFor="let employee of run">
-    <li [(ngModel)]="emploee.id">
-        {{emploee.name}}
-    </li>
-  </ol> -->
-
-<!-- <h2 [(ngModel)]="raju"></h2> -->
+  <table *ngFor = 'let s of product' border="1">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+    </tr>
+    <tr>
+      <th>{{s.id}}</th>
+      <th>{{s.name}}</th>
+    </tr>
+  </table>
+ 

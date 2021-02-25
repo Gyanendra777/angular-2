@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatCardModule,
     FormsModule,
+    HttpClientModule
     
   ],
   providers: [],

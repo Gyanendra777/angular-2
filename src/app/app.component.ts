@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServeService } from './serve.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
-  constructor() {     
+  su:boolean=true;
+ product={};
+  constructor( private service:ServeService ) {     
   } 
+  ngOnInit(){
+    this.service.pridect()
+    .subscribe(ret => this.product = ret)
+  }
+
 }
