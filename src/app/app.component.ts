@@ -10,7 +10,7 @@ export class AppComponent {
   intercept(req,next){
     const newReq = req.clone({...});
     return next.handle(newReq).pipe(
-      map(rest => {
+      map(resp => {
         const newResp = resp.clone({...});
         return newResp;
       })
