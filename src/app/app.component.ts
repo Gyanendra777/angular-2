@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServeService } from './serve.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
-  constructor() {     
+ jp={};
+  constructor(private ser:ServeService) {     
   } 
+  ngOnInit(){
+    this.jp = this.ser.product;
+  }
+  
 }
