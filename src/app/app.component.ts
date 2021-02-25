@@ -6,17 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //////////// single interceptor////////
-  intercept(req,next){
-    const newReq = req.clone({...});
-    return next.handle(newReq).pipe(
-      map(resp => {
-        const newResp = resp.clone({...});
-        return newResp;
-      })
+  //////////// पहला इंटरसेप्टर पहले अनुरोध को संभालता है////////
+  // httplnterceptor[0]
+  // पहला इंटरसेप्टर अंतिम पर प्रतिक्रिया को संभालता है
+  intercept (req,next){
+    return next.handle(req).pipe(
+      map(resp => resp)
     );
-    ///////////
   }
+  // httplnterceptor[1]
+  intercept (req,next){
+    return next.handle(req).pipe(
+      map(resp => resp)
+    );
+  }
+    ///////////
+  
  
   constructor() {     
   } 
