@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Cl } from './cl';
-import { ServiceService } from './service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,29 +6,23 @@ import { ServiceService } from './service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'anguler2';
-  value: string;
-  raju;
-  todaydate
-  
-  public run = [];
-  submitvalue(val) {
-    this.value = val.value
+  //////////// पहला इंटरसेप्टर पहले अनुरोध को संभालता है////////
+  // httplnterceptor[0]
+  // पहला इंटरसेप्टर अंतिम पर प्रतिक्रिया को संभालता है
+  intercept (req,next){
+    return next.handle(req).pipe(
+      map(resp => resp)
+    );
   }
-  constructor(private serves: ServiceService) { 
-    console.log(this.serves.getEmployees());
-    
-    //  console.log(this.raju)
-     }
-  ngOnInit() {
-    console.log(this.serves.getEmployees())
-    this.run = this.serves.getEmployees();
-    this.raju = this.serves.serviceproperty;
-    console.log(this.raju)
+  // httplnterceptor[1]
+  intercept (req,next){
+    return next.handle(req).pipe(
+      map(resp => resp)
+    );
+  }
+    ///////////
+  
  
-    // this.todaydate = this.showTodayDate();
- }
- onClickSubmit(data) {
-    alert("Entered Email id : " + data.emailid);
- }
+  constructor() {     
+  } 
 }
