@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { Cl } from './cl';
-import { ServiceService } from './service.service';
 
 @Component({
   selector: 'app-root',
@@ -8,29 +6,58 @@ import { ServiceService } from './service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // title = 'anguler2';
-  value: string;
-  raju;
-  todaydate
+  search:string;
   
-  public run = [];
-  submitvalue(val) {
-    this.value = val.value
-  }
-  constructor(private serves: ServiceService) { 
-    console.log(this.serves.getEmployees());
-    
-    //  console.log(this.raju)
-     }
-  ngOnInit() {
-    console.log(this.serves.getEmployees())
-    this.run = this.serves.getEmployees();
-    this.raju = this.serves.serviceproperty;
-    console.log(this.raju)
- 
-    // this.todaydate = this.showTodayDate();
- }
- onClickSubmit(data) {
-    alert("Entered Email id : " + data.emailid);
- }
+ productArr = [
+   {
+     son:1,
+     name:"mobile",
+     price:'12000',
+     availity:'available'
+  },
+   {
+     son:2,
+     name:"realem c2",
+     price:'120000',
+     availity:'available'
+  },
+   {
+     son:3,
+     name:"realem",
+     price:'10000',
+     availity:'not available'
+  },
+   {
+     son:4,
+     name:"sumsum",
+     price:'14000',
+     availity:'available'
+  },
+   {
+     son:5,
+     name:"tv",
+     price:'12000',
+     availity:'available'
+  },
+   {
+     son:6,
+     name:"tv",
+     price:'12000',
+     availity:'available'
+  },
+   {
+     son:6,
+     name:"dask top",
+     price:'123000',
+     availity:'available'
+  },
+   {
+     son:7,
+     name:"dask top",
+     price:'10000',
+     availity:'available'
+  },
+ ]
+  constructor() {     
+  } 
 }

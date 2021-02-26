@@ -6,17 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
-import { CompComponent } from './comp/comp.component';
-import { ServiceService } from './service.service';
-import { HemantCmpComponent } from './hemant-cmp/hemant-cmp.component';
-// import { SrComponent } from './share/sr/sr.component';
-import { ShareModule } from './share/share.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PipePipe } from './pipe.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompComponent,
-    HemantCmpComponent,
+    PipePipe,
+  
 
   ],
   imports: [
@@ -25,9 +23,10 @@ import { ShareModule } from './share/share.module';
     BrowserAnimationsModule,
     MatCardModule,
     FormsModule,
-    ShareModule
+    NgbModule,
+    
   ],
-  providers: [ServiceService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
