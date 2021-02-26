@@ -6,11 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { PipePipe } from './pipe.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PipePipe,
   
 
   ],
@@ -20,6 +23,7 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatCardModule,
     FormsModule,
+    NgbModule,
     
   ],
   providers: [],
