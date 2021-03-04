@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Photos } from './photos';
+import { AlbumeService } from './albume.service';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
  
-  constructor() {     
+  constructor(private albumeservice:AlbumeService) {     
   } 
+  list : Photos[]
+  AlbumSelected : Number
+  ngOnInit(){
+    this.albumeservice.getAlbime().subscribe(
+      data=>
+      {
+        this.list = data;
+      }
+    )
+  }
+
 }

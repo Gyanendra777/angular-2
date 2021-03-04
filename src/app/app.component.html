@@ -1,0 +1,27 @@
+<div>
+  <select [(ngModel)]='AlbumSelected'>
+    <option *ngFor='let album of list' [value]="album.id">{{album.title}}
+  </option>
+  </select>
+</div>  
+<br>
+<br>
+this is a AlbumSelected id = {{AlbumSelected}}
+<div style="position: relative;     right: -101px;
+top: 70px;
+">
+  <table border="1px" *ngIf="AlbumSelected">
+    <tr>
+      <th>album</th>
+      <th>Id</th>
+      <th>Title</th>
+      <th>ThumbNail</th>
+    </tr>
+    <tr  *ngFor="let album of list">
+      <td></td>
+      <td>{{album.id}}</td>
+      <td>{{album.title}}</td>
+      <td><img src="{{album.url}}"></td>
+    </tr>
+  </table>
+</div>
