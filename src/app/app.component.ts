@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DesignutilityService } from './designutility.service';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
- 
-  constructor() {     
-  } 
+ texts={}
+  constructor(private _desine:DesignutilityService) {}
+  aliAdd(){
+    this._desine.messageAlert()
+  }
+  
+  ngOnInit(){
+    this.texts = this._desine.product
+
+  }
+
 }

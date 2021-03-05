@@ -1,23 +1,18 @@
-<div class="row">
-  <div class="col-md-8 text-align-center">
-    <div class="card ">
-      <div class="card-body">
-      <h5 class="card-title">leptop</h5>
-      <a class='btn btn-success'>leptop</a>
-    </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-      <h5 class="card-title">mobile</h5>
-      <a class='btn btn-success'>mobile</a>
-    </div>
-    </div>
-    <div class="card">
-      <div class="card-body">
-      <h5 class="card-title">computer</h5>
-      <a class='btn btn-success'>computer</a>
-    </div>
-    </div>
+<h1><a href="" (click)="aliAdd()">click me</a></h1>
 
-  </div>
-</div>
+<h1><a href="https://youtu.be/BfQrp6_L7nY">click vidio linke </a></h1>
+<!-- <div *ngFor="let text of texts">
+  <h1>product id : {{text.id}}</h1>
+  <h1>product name : {{text.name}}</h1>
+
+</div> -->
+<table  border="1" [ngStyle]="{'position': 'relative', 'left': '187px'}">
+  <tr>
+    <th>id</th>
+    <th>name</th>
+  </tr>
+  <tr *ngFor="let text of texts">
+    <td>{{text.id}}</td>
+    <td>{{text.name}}</td>
+  </tr>
+</table>
