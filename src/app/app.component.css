@@ -1,8 +1,5 @@
-mat-card{
-  width: 80%;
-  background-color: pink;
-  position: relative;
-  left: 10%;
-  
-  
+.myclass{
+color: white;
+background-color: brown;
+padding: 10px;
 }
