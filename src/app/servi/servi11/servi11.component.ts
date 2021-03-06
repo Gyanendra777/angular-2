@@ -9,12 +9,11 @@ import { ServiService } from '../../servi.service';
 export class Servi11Component implements OnInit {
 
   constructor( private _Dependene:ServiService) { }
-sd={};
+  sd={};
   ngOnInit(): void {
-    this.sd = this._Dependene.dependey
+  
+    this._Dependene.product().subscribe(productS => this.sd = productS )
   }
-  clickmethed(){
-    this._Dependene.masegalert()
-  }
+
 
 }

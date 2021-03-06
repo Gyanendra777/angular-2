@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Servi11Component } from './servi/servi11/servi11.component';
 import { Serv222Component } from './servi/serv222/serv222.component';
 import { ServiService } from './servi.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { ServiService } from './servi.service';
     MatCardModule,
     FormsModule,
     NgbModule,
+    HttpClientModule
     
   ],
   providers: [ServiService],
