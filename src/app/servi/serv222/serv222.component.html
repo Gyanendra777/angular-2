@@ -1,2 +1,9 @@
-<p>serv222 works!</p>
-<button (click)="clickmethed()">click me dependency Injecdtion22</button>
+<p>chiled wirk</p>
+<h1>{{child.id}}</h1>
+<h1>{{child.name}}</h1>
+<table border="1">
+  <tr *ngFor="let a of child">
+    <th>{{a.id}}</th>
+    <th>{{a.name}}</th>
+  </tr>
+</table>

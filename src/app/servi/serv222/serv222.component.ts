@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ServiService } from 'src/app/servi.service';
+import { Component, Input, OnInit } from '@angular/core';
+// import { ServiService } from 'src/app/servi.service';
 
 @Component({
   selector: 'app-serv222',
@@ -7,12 +7,12 @@ import { ServiService } from 'src/app/servi.service';
   styleUrls: ['./serv222.component.css']
 })
 export class Serv222Component implements OnInit {
+@Input() child
+  constructor() { }
 
-  constructor(private _Dependene:ServiService) { }
+
 
   ngOnInit(): void {
   }
-  clickmethed(){
-    this._Dependene.masegalert()
-  }
+ 
 }

@@ -7,16 +7,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { Servi11Component } from './servi/servi11/servi11.component';
+// import { Servi11Component } from './servi/servi11/servi11.component';
 import { Serv222Component } from './servi/serv222/serv222.component';
-import { ServiService } from './servi.service';
+// import { ServiService } from './servi.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    Servi11Component,
+    // Servi11Component,
     Serv222Component,
   
 
@@ -31,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
     
   ],
-  providers: [ServiService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
