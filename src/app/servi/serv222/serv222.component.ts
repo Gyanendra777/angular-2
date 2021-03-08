@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 // import { ServiService } from 'src/app/servi.service';
 
 @Component({
@@ -7,10 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./serv222.component.css']
 })
 export class Serv222Component implements OnInit {
-@Input() child
+  @Output() childcomponent:EventEmitter<any>= new EventEmitter()
+
+
+  sentdata(chi){
+    this.childcomponent.emit(chi)
+
+  }
   constructor() { }
-
-
 
   ngOnInit(): void {
   }

@@ -1,2 +1,4 @@
 <p>prented</p>
-<app-serv222 [child]='data'></app-serv222>
+<strong>{{child}}</strong>
+<hr>
+<app-serv222 (childcomponent)=sendchild($event)></app-serv222>
