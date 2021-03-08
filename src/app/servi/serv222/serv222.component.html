@@ -1,9 +1,9 @@
-<p>chiled wirk</p>
-<h1>{{child.id}}</h1>
-<h1>{{child.name}}</h1>
-<table border="1">
-  <tr *ngFor="let a of child">
-    <th>{{a.id}}</th>
-    <th>{{a.name}}</th>
-  </tr>
-</table>
+<hr style="border: 2px solid red;">
+<input type="text" #raje>
+<button (click)="sentdata(raje.value)">click me</button>
+
+<br>
+<br>
+
+<h1>parant data pasing</h1>
+<strong>{{child}}</strong>

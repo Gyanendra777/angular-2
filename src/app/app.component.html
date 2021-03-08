@@ -1,2 +1,7 @@
-<p>prented</p>
-<app-serv222 [child]='data'></app-serv222>
+
+<input type="text" #raje>
+<button (click)="sentdata(raje.value)">click me</button>
+<h1>child data passing ------</h1>
+<strong>{{v}}</strong>
+
+<app-serv222 (childComponent)="parentComponent($event)" [child]="s"></app-serv222>
