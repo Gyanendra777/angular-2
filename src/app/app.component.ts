@@ -8,7 +8,7 @@ import { InteractionService } from './interaction.service';
 })
 export class AppComponent {
  
-  constructor(private _interactionService:InteractionService) {     
+  constructor(private _interactionServic:InteractionService,private _interactionService:InteractionService) {     
   }
   greetStudent(){
     this._interactionService.sendMessage("Good Morning")
@@ -16,4 +16,12 @@ export class AppComponent {
   apperciateStudent(){
     this._interactionService.sendMessage("Well Done")
   } 
+messagess
+  ngOnInit(): void {
+    this._interactionServic.teacherMessag.subscribe(
+        message2 => {
+          this.messagess =  message2
+        }
+      )
+    }
 }
