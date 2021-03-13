@@ -9,10 +9,17 @@ import { ServiService } from '../../servi.service';
 export class Servi11Component implements OnInit {
 
   constructor( private _Dependene:ServiService) { }
-  sd={};
+  sd=[];
   ngOnInit(): void {
   
-    this._Dependene.product().subscribe(productS => this.sd = productS )
+    // http ko  hem is trike se vi call kr skte h or ye k trika or v h
+    this._Dependene.produc().subscribe(produ => this.sd = produ );
+    
+    //  or yh dusra trika  h 
+    this._Dependene.produc().subscribe(produ =>{
+        this.sd = produ;
+    });
+
   }
 
 

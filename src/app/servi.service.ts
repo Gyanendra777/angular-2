@@ -18,7 +18,7 @@ dependey=[
     alert ('this is a in dependency Injection')
   }
 
-  product (): Observable<any>{
+  produc (): Observable<any>{
     return this.http.get('https://jsonplaceholder.typicode.com/users')
   }
 }
