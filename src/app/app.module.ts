@@ -7,13 +7,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoursesModule } from './courses/courses.module';
+  import { StaticpagesModule } from './staticpages/staticpages.module';
 
 import { HttpClientModule } from '@angular/common/http';
+import { BannerComponent } from './banner/banner.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    BannerComponent,
+    HeaderComponent,
+    FooterComponent,
+    PageNotFoundComponent,
   
   
 
@@ -25,7 +35,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     FormsModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    CoursesModule,
+    StaticpagesModule
     
   ],
   providers: [],
