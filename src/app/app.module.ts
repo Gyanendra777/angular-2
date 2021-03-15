@@ -9,7 +9,7 @@ import {MatCardModule} from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoursesModule } from './courses/courses.module';
   import { StaticpagesModule } from './staticpages/staticpages.module';
-  import { EmplyeeserviceService } from './auth/employeeservice';
+  import { EmployeeserviceService } from './auth/employeeservice';
 
 
 import { HttpClientModule } from '@angular/common/http';
@@ -42,7 +42,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     StaticpagesModule
     
   ],
-  providers: [ EmplyeeserviceService],
+  providers: [ EmployeeserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
