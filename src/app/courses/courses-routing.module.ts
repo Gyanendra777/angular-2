@@ -4,8 +4,10 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { CourseListComponent } from './course-list/course-list.component';
 
 const routes: Routes = [
-  {path:'course',component:CourseListComponent},
-  {path:'cours/:id',component:CourseDetailComponent}
+  {path:'course',children:[
+    {path:'',component:CourseListComponent},
+    {path:':id',component:CourseDetailComponent}
+  ]}
 ];
 
 @NgModule({
