@@ -1,7 +1,5 @@
+<h1>{{middle}}</h1>
+<app-outputing (postcreat)="onpostadd($event)"></app-outputing>
+<app-inputing [poser]='middle'></app-inputing>
 
-<input type="text" #raje>
-<button (click)="sentdata(raje.value)">click me</button>
-<h1>child data passing ------</h1>
-<strong>{{v}}</strong>
 
-<app-serv222 (childComponent)="parentComponent($event)" [child]="s"></app-serv222>

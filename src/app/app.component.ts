@@ -5,15 +5,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent { 
-  v:any="" ;
-  s
-  sentdata(raju){ 
-    this.s = raju
+  middle=[]
+
+  constructor() {   } 
+  
+  onpostadd(post){
+    this.middle.push(post)
+    console.log("APP compument: "+this.middle);
+    
   }
-  parentComponent($event){
-    this.v = $event;
-  }
-  constructor() {   
-   
-  } 
 }
